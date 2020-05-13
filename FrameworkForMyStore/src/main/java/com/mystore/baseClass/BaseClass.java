@@ -10,6 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -31,6 +32,7 @@ public class BaseClass
 	
 	public ExtentReports report;
 	public ExtentTest logger;
+	String reportPath;
 	
 	@BeforeSuite
 	public void setUpSuite()
@@ -40,20 +42,28 @@ public class BaseClass
 		excel = new ExcelDataProvider();
 		config = new ConfigDataProvider();	
 		
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/MyStore_" +Helper.getCurrentDateTime()+".html"));		
+		reportPath = System.getProperty("user.dir")+"/Reports/MyStore_"+Helper.getCurrentDateTime()+".html";
+		
+		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(reportPath));		
+		
 		report = new ExtentReports();
 		report.attachReporter(extent);
 		
 		Reporter.log("Setting Done and test can be started", true);
 	}
 
+	
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void setUp()
+	public void setUp(String Browser, String qaUrl)
 	{
 		Reporter.log("Trying to start browser and getting application ready", true);
-		
+				
 		System.out.println("Inside setUp Method");
-		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
+		
+		
+		//driver = BrowserFactory.startApplication(driver,config.getBrowser(),config.getStagingURL());
+		driver = BrowserFactory.startApplication(driver, Browser, qaUrl);
 		
 		Reporter.log("Browser and application is up and running", true);
 	}

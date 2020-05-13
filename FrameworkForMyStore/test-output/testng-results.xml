@@ -20,12 +20,12 @@
       <![CDATA[Test completed --- reports generated]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47647" started-at="2020-05-11T12:44:12Z" finished-at="2020-05-11T12:45:00Z">
+  <suite name="Suite" duration-ms="86724" started-at="2020-05-13T12:24:58Z" finished-at="2020-05-13T12:26:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47647" started-at="2020-05-11T12:44:12Z" finished-at="2020-05-11T12:45:00Z">
+    <test name="Test" duration-ms="86724" started-at="2020-05-13T12:24:58Z" finished-at="2020-05-13T12:26:25Z">
       <class name="com.mystore.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.mystore.testcases.LoginPageTest@6a41eaa2]" name="setUpSuite" is-config="true" duration-ms="1282" started-at="2020-05-11T12:44:11Z" finished-at="2020-05-11T12:44:12Z">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUpSuite" is-config="true" duration-ms="2635" started-at="2020-05-13T12:24:56Z" finished-at="2020-05-13T12:24:58Z">
           <reporter-output>
             <line>
               <![CDATA[Setting up reports and test started]]>
@@ -35,7 +35,19 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mystore.testcases.LoginPageTest@6a41eaa2]" name="setUp" is-config="true" duration-ms="30651" started-at="2020-05-11T12:44:12Z" finished-at="2020-05-11T12:44:43Z">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUp" is-config="true" duration-ms="27304" started-at="2020-05-13T12:24:58Z" finished-at="2020-05-13T12:25:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://automationpractice.com/index.php]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Trying to start browser and getting application ready]]>
@@ -45,15 +57,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginApp()[pri:0, instance:com.mystore.testcases.LoginPageTest@6a41eaa2]" name="loginApp" duration-ms="12489" started-at="2020-05-11T12:44:43Z" finished-at="2020-05-11T12:44:56Z">
+        <test-method status="PASS" signature="loginApp()[pri:1, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="loginApp" duration-ms="50072" started-at="2020-05-13T12:25:26Z" finished-at="2020-05-13T12:26:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.LoginPageTest@6a41eaa2]" name="tearDownMethod" is-config="true" duration-ms="2760" started-at="2020-05-11T12:44:56Z" finished-at="2020-05-11T12:44:58Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDownMethod" is-config="true" duration-ms="5872" started-at="2020-05-13T12:26:16Z" finished-at="2020-05-13T12:26:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginApp status=SUCCESS method=LoginPageTest.loginApp()[pri:0, instance:com.mystore.testcases.LoginPageTest@6a41eaa2] output={null}]]]>
+                <![CDATA[[TestResult name=loginApp status=SUCCESS method=LoginPageTest.loginApp()[pri:1, instance:com.mystore.testcases.LoginPageTest@5622fdf] output={null}]]]>
               </value>
             </param>
           </params>
@@ -66,11 +78,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.LoginPageTest@6a41eaa2]" name="tearDown" is-config="true" duration-ms="1705" started-at="2020-05-11T12:44:58Z" finished-at="2020-05-11T12:45:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDown" is-config="true" duration-ms="3424" started-at="2020-05-13T12:26:22Z" finished-at="2020-05-13T12:26:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.mystore.testcases.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

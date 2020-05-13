@@ -33,9 +33,17 @@ public class BrowserFactory
 		
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		driver.get(appURL);	
 		
-		driver.get(appURL);
-		//driver.navigate().refresh();
+		try
+		{
+			driver.get(appURL);	
+		}
+		catch(Exception e)
+		{
+			driver.navigate().refresh();
+		}
+		
 		System.out.println("App url is : "+appURL);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		

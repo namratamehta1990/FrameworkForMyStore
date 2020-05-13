@@ -11,12 +11,12 @@ import com.mystore.utilities.Helper;
 public class LoginPageTest extends BaseClass 
 {
 	
-	@Test
+	@Test(priority=1)
 	public void loginApp() throws InterruptedException
 	{
 		System.out.println("Inside loginApp Method");
 		
-		logger = report.createTest("MyStore application"); 
+		logger=report.createTest("MyStore application"); 
 	
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 		

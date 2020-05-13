@@ -29,7 +29,7 @@ public class ConfigDataProvider
 	}
 		public String getDataFromConfig(String keyToSearch)
 		{
-			return pro.getProperty("keyToSearch");
+			return pro.getProperty(keyToSearch);
 		}
 		
 		public String getBrowser()
