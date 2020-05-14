@@ -20,12 +20,12 @@
       <![CDATA[Test completed --- reports generated]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="86724" started-at="2020-05-13T12:24:58Z" finished-at="2020-05-13T12:26:25Z">
+  <suite name="Suite" duration-ms="142613" started-at="2020-05-14T06:24:15Z" finished-at="2020-05-14T06:26:38Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="86724" started-at="2020-05-13T12:24:58Z" finished-at="2020-05-13T12:26:25Z">
+    <test name="Test" duration-ms="142613" started-at="2020-05-14T06:24:15Z" finished-at="2020-05-14T06:26:38Z">
       <class name="com.mystore.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUpSuite" is-config="true" duration-ms="2635" started-at="2020-05-13T12:24:56Z" finished-at="2020-05-13T12:24:58Z">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUpSuite" is-config="true" duration-ms="3053" started-at="2020-05-14T06:24:12Z" finished-at="2020-05-14T06:24:15Z">
           <reporter-output>
             <line>
               <![CDATA[Setting up reports and test started]]>
@@ -35,7 +35,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUp" is-config="true" duration-ms="27304" started-at="2020-05-13T12:24:58Z" finished-at="2020-05-13T12:25:26Z">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUp" is-config="true" duration-ms="54444" started-at="2020-05-14T06:24:15Z" finished-at="2020-05-14T06:25:10Z">
           <params>
             <param index="0">
               <value>
@@ -57,11 +57,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginApp()[pri:1, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="loginApp" duration-ms="50072" started-at="2020-05-13T12:25:26Z" finished-at="2020-05-13T12:26:16Z">
+        <test-method status="PASS" signature="loginApp()[pri:1, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="loginApp" duration-ms="68951" started-at="2020-05-14T06:25:10Z" finished-at="2020-05-14T06:26:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDownMethod" is-config="true" duration-ms="5872" started-at="2020-05-13T12:26:16Z" finished-at="2020-05-13T12:26:22Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDownMethod" is-config="true" duration-ms="4036" started-at="2020-05-14T06:26:19Z" finished-at="2020-05-14T06:26:23Z">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDown" is-config="true" duration-ms="3424" started-at="2020-05-13T12:26:22Z" finished-at="2020-05-13T12:26:25Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDown" is-config="true" duration-ms="14826" started-at="2020-05-14T06:26:23Z" finished-at="2020-05-14T06:26:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
