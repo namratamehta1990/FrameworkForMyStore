@@ -8,7 +8,9 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
@@ -24,51 +26,54 @@ import com.mystore.utilities.Helper;
 
 public class BaseClass 
 {
-	public WebDriver driver;
+	public static WebDriver driver;
 	
 	public ExcelDataProvider excel;
 	
 	public ConfigDataProvider config;
 	
-	public ExtentReports report;
-	public ExtentTest logger;
+	public static ExtentHtmlReporter reporter;
+	public static ExtentReports extent;
+	public static ExtentTest logger;
 	String reportPath;
 	
-	@BeforeSuite
-	public void setUpSuite()
-	{
-		Reporter.log("Setting up reports and test started", true);
-		
-		excel = new ExcelDataProvider();
-		config = new ConfigDataProvider();	
-		
-		reportPath = System.getProperty("user.dir")+"/Reports/MyStore_"+Helper.getCurrentDateTime()+".html";
-		
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(reportPath));		
-		
-		report = new ExtentReports();
-		report.attachReporter(extent);
-		
-		Reporter.log("Setting Done and test can be started", true);
-	}
-
-	
 	@Parameters({"browser","url"})
-	@BeforeClass
+	@BeforeSuite
 	public void setUp(String Browser, String qaUrl)
 	{
-		Reporter.log("Trying to start browser and getting application ready", true);
-				
-		System.out.println("Inside setUp Method");
+			Reporter.log("Setting up reports and test started", true);
 		
+			excel = new ExcelDataProvider();
+			config = new ConfigDataProvider();
 		
-		//driver = BrowserFactory.startApplication(driver,config.getBrowser(),config.getStagingURL());
-		driver = BrowserFactory.startApplication(driver, Browser, qaUrl);
+			Reporter.log("Setting Done and test can be started", true);
 		
-		Reporter.log("Browser and application is up and running", true);
+			Reporter.log("Trying to start browser and getting application ready", true);
+		
+			System.out.println("Inside setUp Method");
+		
+			driver = BrowserFactory.startApplication(driver, Browser, qaUrl);
+		
+			Reporter.log("Browser and application is up and running", true);
+
 	}
 
-	@AfterClass
+
+	@BeforeSuite
+	public void setup2()
+	{
+		reportPath = System.getProperty("user.dir")+"/Reports/MyStore_"+Helper.getCurrentDateTime()+".html";
+	   
+		reporter = new ExtentHtmlReporter(new File(reportPath));
+	
+		extent = new ExtentReports();
+	   
+		extent.attachReporter(reporter);
+	   	   
+		logger=extent.createTest("MyStore application");
+	}
+
+	@AfterSuite
 	public void tearDown()
 	{
 		System.out.println("Inside tearDown Method");
@@ -78,7 +83,7 @@ public class BaseClass
 	@AfterMethod
 	public void tearDownMethod(ITestResult result)
 	{
-		Reporter.log("Test is about to end", true);
+		//Reporter.log("Test is about to end", true);
 		
 		if(result.getStatus()==ITestResult.FAILURE)
 		{
@@ -114,8 +119,8 @@ public class BaseClass
 			}
 		}
 		
-		report.flush();
+		extent.flush();
 		
-		Reporter.log("Test completed --- reports generated", true);
+		//Reporter.log("Test completed --- reports generated", true);
 	}
 }

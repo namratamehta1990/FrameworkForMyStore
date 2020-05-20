@@ -6,6 +6,7 @@
   <test name="Test">
     <classes>
       <class name="com.mystore.testcases.LoginPageTest"/>
+      <class name="com.mystore.testcases.MyWishListPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

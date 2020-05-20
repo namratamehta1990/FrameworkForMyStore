@@ -5,15 +5,15 @@
   <parameter name="url" value="http://automationpractice.com/index.php"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.mystore.testcases.LoginPageTest">
+      <class name="com.mystore.testcases.MyWishListPageTest">
         <methods>
+          <include name="setup2"/>
           <include name="tearDown"/>
-          <include name="loginApp"/>
+          <include name="verifyMyWishListPageTest"/>
           <include name="tearDownMethod"/>
-          <include name="setUpSuite"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.mystore.testcases.LoginPageTest -->
+      </class> <!-- com.mystore.testcases.MyWishListPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

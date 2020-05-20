@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="5" passed="2">
   <reporter-output>
     <line>
       <![CDATA[Setting up reports and test started]]>
@@ -13,29 +13,30 @@
     <line>
       <![CDATA[Browser and application is up and running]]>
     </line>
-    <line>
-      <![CDATA[Test is about to end]]>
-    </line>
-    <line>
-      <![CDATA[Test completed --- reports generated]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="142613" started-at="2020-05-14T06:24:15Z" finished-at="2020-05-14T06:26:38Z">
+  <suite name="Suite" duration-ms="80862" started-at="2020-05-20T13:09:40Z" finished-at="2020-05-20T13:11:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="142613" started-at="2020-05-14T06:24:15Z" finished-at="2020-05-14T06:26:38Z">
-      <class name="com.mystore.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUpSuite" is-config="true" duration-ms="3053" started-at="2020-05-14T06:24:12Z" finished-at="2020-05-14T06:24:15Z">
+    <test name="Test" duration-ms="80862" started-at="2020-05-20T13:09:40Z" finished-at="2020-05-20T13:11:01Z">
+      <class name="com.mystore.testcases.MyWishListPageTest">
+        <test-method status="PASS" signature="verifyMyWishListPageTest()[pri:0, instance:com.mystore.testcases.MyWishListPageTest@42e26948]" name="verifyMyWishListPageTest" duration-ms="18676" started-at="2020-05-20T13:10:42Z" finished-at="2020-05-20T13:11:00Z">
           <reporter-output>
-            <line>
-              <![CDATA[Setting up reports and test started]]>
-            </line>
-            <line>
-              <![CDATA[Setting Done and test can be started]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="setUp" is-config="true" duration-ms="54444" started-at="2020-05-14T06:24:15Z" finished-at="2020-05-14T06:25:10Z">
+        </test-method> <!-- verifyMyWishListPageTest -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.MyWishListPageTest@42e26948]" name="tearDownMethod" is-config="true" duration-ms="1050" started-at="2020-05-20T13:11:00Z" finished-at="2020-05-20T13:11:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMyWishListPageTest status=SUCCESS method=MyWishListPageTest.verifyMyWishListPageTest()[pri:0, instance:com.mystore.testcases.MyWishListPageTest@42e26948] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- com.mystore.testcases.MyWishListPageTest -->
+      <class name="com.mystore.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.mystore.testcases.LoginPageTest@1794d431]" name="setUp" is-config="true" duration-ms="57341" started-at="2020-05-20T13:08:42Z" finished-at="2020-05-20T13:09:39Z">
           <params>
             <param index="0">
               <value>
@@ -50,6 +51,12 @@
           </params>
           <reporter-output>
             <line>
+              <![CDATA[Setting up reports and test started]]>
+            </line>
+            <line>
+              <![CDATA[Setting Done and test can be started]]>
+            </line>
+            <line>
               <![CDATA[Trying to start browser and getting application ready]]>
             </line>
             <line>
@@ -57,28 +64,26 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginApp()[pri:1, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="loginApp" duration-ms="68951" started-at="2020-05-14T06:25:10Z" finished-at="2020-05-14T06:26:19Z">
+        <test-method status="PASS" signature="setup2()[pri:0, instance:com.mystore.testcases.LoginPageTest@1794d431]" name="setup2" is-config="true" duration-ms="1013" started-at="2020-05-20T13:09:39Z" finished-at="2020-05-20T13:09:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup2 -->
+        <test-method status="PASS" signature="loginApp()[pri:0, instance:com.mystore.testcases.LoginPageTest@1794d431]" name="loginApp" duration-ms="55612" started-at="2020-05-20T13:09:41Z" finished-at="2020-05-20T13:10:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDownMethod" is-config="true" duration-ms="4036" started-at="2020-05-14T06:26:19Z" finished-at="2020-05-14T06:26:23Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.mystore.testcases.LoginPageTest@1794d431]" name="tearDownMethod" is-config="true" duration-ms="5462" started-at="2020-05-20T13:10:36Z" finished-at="2020-05-20T13:10:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginApp status=SUCCESS method=LoginPageTest.loginApp()[pri:1, instance:com.mystore.testcases.LoginPageTest@5622fdf] output={null}]]]>
+                <![CDATA[[TestResult name=loginApp status=SUCCESS method=LoginPageTest.loginApp()[pri:0, instance:com.mystore.testcases.LoginPageTest@1794d431] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[Test is about to end]]>
-            </line>
-            <line>
-              <![CDATA[Test completed --- reports generated]]>
-            </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.LoginPageTest@5622fdf]" name="tearDown" is-config="true" duration-ms="14826" started-at="2020-05-14T06:26:23Z" finished-at="2020-05-14T06:26:38Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mystore.testcases.LoginPageTest@1794d431]" name="tearDown" is-config="true" duration-ms="56777" started-at="2020-05-20T13:11:04Z" finished-at="2020-05-20T13:12:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
